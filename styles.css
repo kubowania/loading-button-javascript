@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#search-button {
+    border: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(219, 18, 58);
+    color: rgb(245, 239, 239);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-button:hover {
+    background-color: rgb(255, 68, 99);
+}
+
+#search-button:active {
+    background-color: rgb(153, 21, 47);
+}
+
+#search-button .loading {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 5px solid rgba(0,0,0, 0.2);
+    border-right-color: rgb(245, 239, 239);
+    animation: loading-animation 2s linear infinite;
+}
+
+#search-button h3 {
+    margin: 0;
+    padding: 0;
+}
+
+#search-button .loading * {
+    display: none;
+}
+
+@keyframes loading-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
